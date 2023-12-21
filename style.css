@@ -3,6 +3,12 @@
    src: url(/fontes/Hobo/hobo.ttf);
 }
 
+body {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f2f2f2;
+}
+
 .topo {
   display: flex;
   height: 50px;
@@ -96,6 +102,57 @@ label {
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+.barraTitulo {
+  display: flex;
+  width: 100%;
+  height: 25px;
+  background: black;
+}
+
+.descrBarra, .valorBarra, .qtdeBarra, .totalBarra {
+  box-sizing: border-box;
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 5px;
+}
+
+.barraItem{
+  display: none;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+#descrItem, #valorItem, #qtdeItem, #totalItem {
+  box-sizing: border-box;
+  display: block;
+  border-bottom: 1px solid  black ;
+  border-right: 1px solid  black ;
+  height: 25px;
+  padding: 5px;
+}
+
+.descrBarra, #descrItem {
+  width: 50%;
+}
+
+.valorBarra, #valorItem{
+  width: 17%;
+}
+
+.qtdeBarra, #qtdeItem {
+  width: 13%;
+}
+
+.totalBarra, #totalItem {
+  width: 20%;
+}
+
+
+
 
 
 

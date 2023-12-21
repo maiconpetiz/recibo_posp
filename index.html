@@ -18,28 +18,40 @@
 
     <div class="dados">
       <div class="item">
-        <label for="item">Item:</label>
+        <label for="item">Item</label>
         <input type="text" id="item" name="item" required placeholder="Descrição do Item">
       </div>
       <div class="container">
         <div class="valor">
-        <label for="valor">Valor (R$):</label>
+          <label for="valor">Valor</label>
           <input id="campo" type="text" onKeyUp="mascaraMoeda(this)" placeholder="R$ 0,00">
+        </div>
+        <div class="qtde">
+          <label for="quantidade">Quantidade</label>
+          <input type="number" id="quantidade" name="quantidade" placeholder="0" required>
+        </div>
+        <button id="btnAdd" class="submit" type="submit" onclick="gerarItem()">
+          +
+        </button>
       </div>
-      <div class="qtde">
-        <label for="quantidade">Quantidade:</label>
-        <input type="number" id="quantidade" name="quantidade" required placeholder="0">
-      </div>   
-      <button class="submit"> 
-        +
-      </button>
-      </div>
-
-
-
+    </div>
+  </header>
+  <main>
+    <div class="barraTitulo">
+      <div class="descrBarra">Descrição</div>
+      <div class="valorBarra">Valor</div>
+      <div class="qtdeBarra">Qtde</div>
+      <div class="totalBarra">Total</div>  
     </div>
 
-  </header>
+    <div class="barraItem">
+      <div id="descrItem"></div>
+      <div id="valorItem"></div>
+      <div id="qtdeItem"></div>
+      <div id="totalItem"></div>  
+    </div>
+  </main>
 
 </body>
+
 </html>
