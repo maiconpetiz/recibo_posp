@@ -1,14 +1,13 @@
-//mancara campo valor
 String.prototype.reverse = function(){
   return this.split('').reverse().join(''); 
 };
 
-function mascaraMoeda(campo,evento){
-  var tecla = (!evento) ? window.event.keyCode : evento.which;
+//mascara campo valor
+function mascaraMoeda(campo){
   var valor  =  campo.value.replace(/[^\d]+/gi,'').reverse();
   var resultado  = "";
   var mascara = "##.###.###,##".reverse();
-  for (var x=0, y=0; x<mascara.length && y<valor.length) {
+  for (var x=0, y=0; x<mascara.length && y<valor.length;) {
     if (mascara.charAt(x) != '#') {
       resultado += mascara.charAt(x);
       x++;
@@ -18,5 +17,5 @@ function mascaraMoeda(campo,evento){
       x++;
     }
   }
-  campo.value = resultado.reverse();
+  campo.value = "R$" + resultado.reverse();
 }
