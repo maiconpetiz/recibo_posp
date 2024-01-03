@@ -2,6 +2,7 @@ String.prototype.reverse = function(){
   return this.split('').reverse().join(''); 
 };
 
+
 //mascara campo valor
 function mascaraMoeda(campo){
   var valor  =  campo.value.replace(/[^\d]+/gi,'').reverse();
@@ -20,4 +21,33 @@ function mascaraMoeda(campo){
   campo.value = "R$ " + resultado.reverse();
 }
 
+
+
 //pegando itens
+let itens = [];
+
+function salvarItem() {
+  item = document.getElementById('item').value;
+  valor = document.getElementById('campo').value;
+  qtde = document.getElementById('quantidade').value;
+
+let objItem = {
+  item: item,
+  valor: valor,
+  qtde: qtde,
+  totalItem: valor * qtde
+}
+
+itens.push(objItem);
+
+document.getElementById('item').value = "";
+document.getElementById('campo').value = "";
+document.getElementById('quantidade').value = "";
+console.log(itens);
+console.log(valor);
+};
+
+
+
+
+
